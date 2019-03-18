@@ -1131,7 +1131,7 @@ insert into tab1_AM(id, nazwa) values (200, 'wiersz nr 200');
 --5.1
 create table tab3_AM 
 (
-id int primary key,
+id int,
 nazwa char(300)
 );
 --5.2
