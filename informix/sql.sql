@@ -930,6 +930,7 @@ delete from tab1_AM where id <= 600;
 database sysadmin;
 EXECUTE FUNCTION admin("table shrink", "tab1_am","db1_am");
 --4.13
+database db1_AM
 insert into tab1_AM(id, nazwa) values (1, 'wiersz nr 1');
 insert into tab1_AM(id, nazwa) values (2, 'wiersz nr 2');
 insert into tab1_AM(id, nazwa) values (3, 'wiersz nr 3');
