@@ -3,6 +3,7 @@ create database db1_AM in daneAM1;
 --2.2
 create database db2_AM in daneAM2;
 --3.1
+database db1_AM;
 create table tab1_AM 
 (
 id int primary key,
@@ -511,8 +512,8 @@ insert into tab1_AM(id, nazwa) values (499, 'wiersz nr 499');
 insert into tab1_AM(id, nazwa) values (500, 'wiersz nr 500');
 
 --4.1
-
-create table tab1_AM 
+database db2_AM;
+create table tab2_AM 
 (
 id int primary key,
 nazwa char(100)
@@ -926,6 +927,7 @@ insert into tab1_AM(id, nazwa) values (700, 'wiersz nr 700');
 --4.9
 delete from tab1_AM where id <= 600;
 --4.11
+database sysadmin;
 EXECUTE FUNCTION admin("table shrink", "tab1_am","db1_am");
 --4.13
 insert into tab1_AM(id, nazwa) values (1, 'wiersz nr 1');
